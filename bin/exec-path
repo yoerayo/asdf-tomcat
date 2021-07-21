@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-set -euo pipefail
-
-install_path="$1"
-command="$2"
-executable_path="$3"
-
-echo $install_path/bin/catalina.sh
