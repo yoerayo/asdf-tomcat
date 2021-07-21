@@ -40,9 +40,10 @@ download_release() {
   local version filename url
   version="$1"
   filename="$2"
+  major_version="${version%%.*}"
 
   # TODO: Adapt the release URL convention for tomcat
-  url="$GH_REPO/archive/v${version}.tar.gz"
+  url="https://archive.apache.org/dist/tomcat/tomcat-${major_version}/v${version}/bin/apache-tomcat-${version}.tar.gz"
 
   echo "* Downloading $TOOL_NAME release $version..."
   curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
