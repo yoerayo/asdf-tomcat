@@ -5,7 +5,7 @@ set -euo pipefail
 # TODO: Ensure this is the correct GitHub homepage where releases can be downloaded for tomcat.
 GH_REPO="https://github.com/apache/tomcat"
 TOOL_NAME="tomcat"
-TOOL_TEST="tomcat --help"
+TOOL_TEST="version.sh"
 
 fail() {
   echo -e "asdf-$TOOL_NAME: $*"
